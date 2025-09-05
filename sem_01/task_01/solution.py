@@ -4,25 +4,25 @@
 
 def get_variables():
     # Целое число
-    integer_number = None
+    integer_number = 1
 
     # Число с плавающей точкой
-    float_number = None
+    float_number = 1.1
 
     # Строка
-    string_value = None
+    string_value = "None"
 
     # Логическое значение (истина)
-    boolean_true = None
+    boolean_true = True
 
     # Логическое значение (ложь)
-    boolean_false = None
+    boolean_false = False
 
     # Список из чисел от 1 до 5
-    list_of_numbers = None
+    list_of_numbers = [1, 2, 3, 4, 5]
 
     # Словарь с ключами 'name' и 'age', и соответствующими значениями
-    dictionary = None
+    dictionary = {"name": "John", "age": 30}
 
     # Вернуть все переменные в виде кортежа
     return (
