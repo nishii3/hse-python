@@ -20,7 +20,7 @@ def is_in_range(number, start, end):
     """
     Возвращает True, если число находится в диапазоне [start, end], иначе False
     """
-   return start <= number <= end
+    return start <= number <= end
 
 
 def max_of_three(a, b, c):
@@ -41,8 +41,10 @@ def fizz_buzz(number):
         return "FizzBuzz"
     elif abs(number) % 5 == 0:
         return "Buzz"
-    else
+    elif abs(number) % 3 == 0:
         return "Fizz"
+    else:
+        return str(number)
 
 def grade_converter(score):
     """
