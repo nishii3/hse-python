@@ -6,32 +6,28 @@ def is_positive(number):
     """
     Возвращает True, если число положительное, иначе False
     """
-    # Ваш код здесь
-    pass
+    return number > 0
 
 
 def is_even(number):
     """
     Возвращает True, если число четное, иначе False
     """
-    # Ваш код здесь
-    pass
+    return abs(number) % 2 == 0
 
 
 def is_in_range(number, start, end):
     """
     Возвращает True, если число находится в диапазоне [start, end], иначе False
     """
-    # Ваш код здесь
-    pass
+   return start <= number <= end
 
 
 def max_of_three(a, b, c):
     """
     Возвращает максимальное из трех чисел
     """
-    # Ваш код здесь
-    pass
+    return max(a, b, c)
 
 
 def fizz_buzz(number):
@@ -41,9 +37,12 @@ def fizz_buzz(number):
     Если число делится и на 3, и на 5, возвращает "FizzBuzz"
     Иначе возвращает само число в виде строки
     """
-    # Ваш код здесь
-    pass
-
+    if abs(number) % 15 == 0:
+        return "FizzBuzz"
+    elif abs(number) % 5 == 0:
+        return "Buzz"
+    else
+        return "Fizz"
 
 def grade_converter(score):
     """
@@ -55,5 +54,15 @@ def grade_converter(score):
     0-59: 'F'
     Если score не в диапазоне 0-100, возвращает 'Invalid score'
     """
-    # Ваш код здесь
-    pass
+    if 0 > score or 100 < score:
+        return 'Invalid score'
+    elif 90 <= score:
+        return 'A'
+    elif 80 <= score:
+        return 'B'
+    elif 70 <= score:
+        return 'C'
+    elif 60 <= score:
+        return 'D'
+    else:
+        return 'F'
