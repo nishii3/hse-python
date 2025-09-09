@@ -15,7 +15,8 @@ def absolute_value(number):
     """
     Возвращает абсолютное значение числа
     """
-    return abs(number)
+    
+    return number if number >= 0 else -number
 
 
 def calculate_area(shape, *args):
