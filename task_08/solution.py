@@ -1,22 +1,21 @@
 # Задание 8: Функции
 # Реализуйте различные функции согласно их описанию
 
+import math
 
 def greet(name):
     """
     Возвращает приветствие для имени
     Например, "Привет, Иван!"
     """
-    # Ваш код здесь
-    pass
+    return f"Привет, {name}!"
 
 
 def absolute_value(number):
     """
     Возвращает абсолютное значение числа
     """
-    # Ваш код здесь
-    pass
+    return abs(number)
 
 
 def calculate_area(shape, *args):
@@ -33,8 +32,13 @@ def calculate_area(shape, *args):
     Возвращает:
     - площадь фигуры или None, если тип фигуры неизвестен
     """
-    # Ваш код здесь
-    pass
+    if shape == "circle":
+        return args[0] ** 2 * math.pi
+    if shape == "rectangle":
+        return args[0] * args[1]
+    if shape == "triangle":
+        return args[0] * args[1] / 2
+    return
 
 
 def apply_operation(operation, a, b):
@@ -48,8 +52,15 @@ def apply_operation(operation, a, b):
     Возвращает:
     - результат операции или None, если операция неизвестна
     """
-    # Ваш код здесь
-    pass
+    if operation == "add":
+        return a + b
+    if operation == "subtract":
+        return a - b
+    if operation == "multiply":
+        return a * b
+    if operation == "divide" and b != 0:
+        return a / b
+    return
 
 
 def create_multiplier(factor):
@@ -60,8 +71,9 @@ def create_multiplier(factor):
     double = create_multiplier(2)
     result = double(5)  # result = 10
     """
-    # Ваш код здесь
-    pass
+    def A(x):
+        return x * factor
+    return A
 
 
 def apply_to_each(func, items):
@@ -72,5 +84,7 @@ def apply_to_each(func, items):
     Пример использования:
     result = apply_to_each(lambda x: x*2, [1, 2, 3])  # result = [2, 4, 6]
     """
-    # Ваш код здесь
-    pass
+    ans = []
+    for i in items:
+        ans.append(func(i))
+    return ans
